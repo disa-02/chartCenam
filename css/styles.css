@@ -1,0 +1,122 @@
+/* Fondo del cuerpo de la página */
+body {
+    font-family: 'Roboto', sans-serif; /* Fuente moderna */
+    background-color: #f0f2f5; /* Fondo ligero opcional si no usas la imagen de fondo en el body */
+    color: #333; /* Texto en gris oscuro */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../banner.png'); /* Ruta de la imagen de fondo */
+    background-size: cover; /* Ajusta la imagen para cubrir el área del fondo */
+    background-position: center; /* Centra la imagen en la pantalla */
+    background-repeat: no-repeat; /* No repetir la imagen si es más pequeña que el área de visualización */
+}
+
+/* Opcional: Estilo para el contenedor que contiene el gráfico y las opciones */
+.container {
+    display: flex;
+    justify-content: space-between;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+}
+
+/* Options panel on the left side */
+.options-panel {
+    width: 25%; /* 25% of the width for options */
+    padding: 20px;
+    background-color: #2c3e50; /* Fondo oscuro elegante */
+    color: #ecf0f1; /* Texto claro sobre el fondo oscuro */
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between options */
+    box-sizing: border-box;
+}
+
+/* Labels inside options panel */
+.options-panel label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    display: block;
+}
+
+/* Inputs and select inside options panel */
+.options-panel input,
+.options-panel select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #bdc3c7;
+    background-color: #34495e; /* Input background similar to panel */
+    color: #ecf0f1; /* Light text */
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+/* Chart panel on the right side */
+.chart-panel {
+    width: 75%; /* 75% of the width for the chart */
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    box-sizing: border-box;
+}
+
+#myChart {
+    width: 100%; /* Occupy full width of the container */
+    height: 100%; /* Occupy full height of the container */
+}
+
+/* Style for the selected central text */
+.selected-central {
+    color: #070707; /* Rojo moderno */
+    text-align: center;
+    font-size: 1.5em; /* Tamaño más grande para destacar */
+    margin-bottom: 5px;
+}
+
+/* Style for the list of selected centrals */
+#selectedCentral {
+    color: #e74c3c;
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 1.2em; /* Tamaño ligeramente más grande */
+}
+
+/* Añadir transición suave para todos los elementos */
+.options-panel input,
+.options-panel select,
+.selected-central,
+#selectedCentral {
+    transition: all 0.3s ease;
+}
+
+/* Cambiar el color de los inputs al enfocarse */
+.options-panel input:focus,
+.options-panel select:focus {
+    border-color: #3498db;
+    background-color: #3b5998;
+    outline: none;
+}
+
+.file-item {
+    cursor: pointer;
+    padding: 10px;
+    border: 1px solid #ccc;
+    margin-bottom: 5px;
+    /* background-color: #f9f9f9; */
+}
+
+.file-item:hover {
+    background-color: #8a8888;
+    /* border-color: #999; */
+}
